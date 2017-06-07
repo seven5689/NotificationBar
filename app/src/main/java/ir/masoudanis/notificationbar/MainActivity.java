@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         intent = new Intent(this, MainActivity.class);
-        pi = PendingIntent.getActivities(this, (int) System.currentTimeMillis(), new Intent[] {intent}, 0);
+        pi = PendingIntent.getActivity(this, (int) System.currentTimeMillis(), intent, 0);
 
     }
 
@@ -39,4 +39,6 @@ public class MainActivity extends AppCompatActivity {
         notificationManager.notify(0, notification);
         finish();
     }
+
+
 }
